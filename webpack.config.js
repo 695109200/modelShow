@@ -8,7 +8,7 @@ module.exports = {
     filename: "bundle.js",
     path: path.resolve(__dirname, "dist"),
     clean: false,
-    libraryTarget:'umd',
+    libraryTarget:'umd', //node环境与浏览器环境兼容
     umdNamedDefine: true,
     globalObject: 'this'
   },

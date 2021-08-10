@@ -7,8 +7,10 @@
     <script src="./bundle.js"></script>
 </head>
 <body>
+    <div style="width:600px;height:600px;" id="modelBox"></div>
+
     <script >
-        new modelShow().show()
+        new modelShow({ dom:'#modelBox',src:'./smy.glb'}).show()
     </script>
 </body>
 </html>
