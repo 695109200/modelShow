@@ -3,8 +3,14 @@
 import * as THREE from "three";
 
 export class camera{
-    constructor(){
+    constructor(Option){
         this.camera = undefined
+        this.width = Option.dom
+        ? document.querySelector(Option.dom).clientWidth
+        : window.innerWidth;
+      this.height = Option.dom
+        ? document.querySelector(Option.dom).clientHeight
+        : window.innerHeight;
     }
     //初始化镜头
     initCamera() {

@@ -5,9 +5,8 @@ export class controls{
         this.controls = undefined
     }
     initControls(camera,renderer) {
-        console.log(renderer)
-        // this.controls = new OrbitControls(camera,renderer.domElement);
-        // this.controls.update();
+        this.controls = new OrbitControls(camera,renderer.domElement);
+        this.controls.update();
         return this.controls
     }
 }
