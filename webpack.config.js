@@ -3,9 +3,9 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
   mode:'development',
-  entry: "./src/index.js",
+  entry: "./src/modelShow.js",
   output: {
-    filename: "bundle.js",
+    filename: "modelShow.js",
     path: path.resolve(__dirname, "dist"),
     clean: false,
     libraryTarget:'umd', //node环境与浏览器环境兼容
