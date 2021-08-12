@@ -25,7 +25,9 @@ export class modelShow {
       this.modelUtil.setModelCenter(obj.scene ? obj.scene : obj,this.controls)
       this.modelUtil.setModelScale(obj.scene ? obj.scene : obj)
       this.scene.add(obj.scene ? obj.scene : obj)
-      this.Option.loadEnd()
+      if(this.Option.loadEnd){
+        this.Option.loadEnd()
+      }
     })
 
     this.hdrUtil.load('./test.hdr',this.renderer).then((envMap)=>{

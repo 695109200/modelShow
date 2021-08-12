@@ -23,7 +23,9 @@ export class model {
       this.loader.load(src, (obj) => {
         res(obj)
       }, (xhr) => {
-        this.Option.loadProgress((xhr.loaded / xhr.total * 100))
+        if(this.Option.loadProgress){
+          this.Option.loadProgress((xhr.loaded / xhr.total * 100))
+        }
       }, (err) => {
         console.error('modelShow：Load Model Error')
       });
