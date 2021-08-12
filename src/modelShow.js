@@ -15,10 +15,10 @@ export class modelShow {
     this.scene = new scene().initScene()
     this.light = new light().initLight();
     this.controls = new controls().initControls(this.camera,this.renderer);
-    
+    this.show()
   }
   show() {
-    new modelLoad().load(this.Option.src).then((obj)=>{
+    new modelLoad(this.Option).load(this.Option.src).then((obj)=>{
       this.scene.add(obj.scene)
       console.log(this.controls)
     })

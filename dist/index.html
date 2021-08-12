@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        body{
+        body {
             margin: 0;
         }
     </style>
@@ -14,10 +14,19 @@
 </head>
 
 <body>
-    <div style="width:50vw;height:50vh;" id="modelBox"></div>
+    <div style="width:100vw;height:100vh;" id="modelBox"></div>
 
     <script>
-        new modelShow({ dom: '#modelBox', src: './smy.glb' }).show()
+        new modelShow({
+                dom: '#modelBox',
+                src: './smy.glb',
+                loadProgress:(progress)=>{
+                    console.log('Model progress:  '+progress)
+                },
+                loadEnd:()=>{
+                    console.log('model done')
+                }
+            })
     </script>
 </body>
 
