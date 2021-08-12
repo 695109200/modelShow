@@ -2,9 +2,9 @@ import * as THREE from "three";
 import { RGBELoader } from "three/examples/jsm/loaders/RGBELoader";
 
 export class hdr {
-  constructor(Option) {
+  constructor() {
   }
-  loads(src,renderer) {
+  load(src,renderer) {
       return new Promise((res,rej)=>{
         const pmremGenerator = new THREE.PMREMGenerator(renderer); // 使用hdr作为背景色
         pmremGenerator.compileEquirectangularShader();

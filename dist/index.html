@@ -18,15 +18,15 @@
 
     <script>
         new modelShow({
-                dom: '#modelBox',
-                src: './smy.glb',
-                loadProgress:(progress)=>{
-                    console.log('Model progress:  '+progress)
-                },
-                loadEnd:()=>{
-                    console.log('model done')
-                }
-            })
+            dom: '#modelBox',
+            src: './test.glb',
+            loadProgress: (progress) => {
+                console.log('Model progress:  ' + progress)
+            },
+            loadEnd: () => {
+                console.log('model done')
+            }
+        })
     </script>
 </body>
 
